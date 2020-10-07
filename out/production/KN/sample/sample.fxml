@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <SplitPane dividerPositions="0.21680216802168023" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Accordion>
+               <panes>
+                  <TitledPane animated="false" text="Добавить запись про клиента">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="356.8" prefWidth="229.6" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="364.0" text="ФИО" />
+                                    <TextField fx:id="secondNameClientTextField" promptText="фамилия" />
+                                    <TextField fx:id="firstNameClientTextField" promptText="имя" />
+                                    <TextField fx:id="middleNameClientTextField" promptText="отчество" />
+                                    <Label prefHeight="18.0" prefWidth="364.0" text="Контактній телефон" />
+                                    <TextField fx:id="phoneClientTextField" />
+                                    <Label prefHeight="18.0" prefWidth="430.0" text="Номер водительского удостоверения" />
+                                    <TextField fx:id="driversLicenceNumTextField" />
+                                    <Label prefHeight="18.0" prefWidth="322.0" text="Марка автомобиля" />
+                                    <TextField fx:id="carModelClientTextField" />
+                                    <Button fx:id="addClientRecordButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="137.0" text="Добавить запись" />
+                                    <Label fx:id="addClientServiceLabel" alignment="TOP_CENTER" prefHeight="42.0" prefWidth="237.0" textFill="#07da23" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Добавить запись про услугу">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="609.6" prefWidth="257.6" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="364.0" text="Название услуги" />
+                                    <TextField fx:id="serviceTitleTextField" />
+                                    <Label prefHeight="18.0" prefWidth="430.0" text="Тип услуги" />
+                                    <TextField fx:id="serviceTypeTextField" />
+                                    <Label prefHeight="18.0" prefWidth="364.0" text="Цена услуги" />
+                                    <TextField fx:id="servicePriceTextField" />
+                                    <Button fx:id="addServiceRecordButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Добавить запись" />
+                                    <Label fx:id="addServiceResultLabel" alignment="TOP_CENTER" prefHeight="42.0" prefWidth="237.0" textFill="#060606" wrapText="true">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Добавить запись про работника СТО">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="696.0" prefWidth="257.6" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="364.0" text="ФИО" />
+                                    <TextField fx:id="secondNameWorkerTextField" promptText="фамилия" />
+                                    <TextField fx:id="firstNameWorkerTextField" promptText="имя" />
+                                    <TextField fx:id="middleNameWorkerTextField" promptText="отчество" />
+                                    <Label prefHeight="18.0" prefWidth="364.0" text="Контактній телефон" />
+                                    <TextField fx:id="phoneWorkerTextField" />
+                                    <Label prefHeight="18.0" prefWidth="430.0" text="Дата приема на работу" />
+                                    <HBox prefHeight="15.0" prefWidth="218.0" spacing="2.0">
+                                       <children>
+                                          <TextField fx:id="ddTextField" promptText="дд" />
+                                          <TextField fx:id="mmTextField" promptText="мм" />
+                                          <TextField fx:id="yyyyTextField" promptText="гггг" />
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="18.0" prefWidth="338.0" text="Вид деятельности" />
+                                    <TextField fx:id="occupationWorkerTextField" />
+                                    <Label prefHeight="18.0" prefWidth="444.0" text="Зароботная плата" />
+                                    <TextField fx:id="salaryWorkerTextField" />
+                                    <Button fx:id="addWorkerRecordButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Добавить запись" />
+                                    <Label fx:id="addWorkerResultLabel" alignment="TOP_CENTER" prefHeight="42.0" prefWidth="237.0" textFill="#07da23" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Создать накладную">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="55.0" layoutY="45.0" prefHeight="696.0" prefWidth="257.6" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="servicesMakeInvoiceTable" prefHeight="162.0" prefWidth="239.0">
+                                      <columns>
+                                        <TableColumn fx:id="makeInvoiceServiceColumn" prefWidth="75.0" text="Услуга" />
+                                        <TableColumn fx:id="makeInvoiceServicePriceColumn" prefWidth="75.0" text="Стоимость услуги" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Button fx:id="makeInvoiceShowServicesButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="254.0" text="Показать записи о услугах" />
+                                    <Button fx:id="addServiceToInvoiceButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="271.0" text="Добавить услугу в накладную" />
+                                    <Button fx:id="makeInvoiceButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="316.0" text="Создать накладную" />
+                                    <TableView fx:id="serviceInvoiceTable" prefHeight="181.0" prefWidth="239.0">
+                                       <columns>
+                                          <TableColumn fx:id="invoiceServiceColumn" prefWidth="75.0" text="Услуга" />
+                                          <TableColumn fx:id="invoiceServicePriceColumn" prefWidth="75.0" text="Стоимость услуги" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </panes>
+            </Accordion>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="466.0">
+               <children>
+                  <TabPane prefHeight="621.6" prefWidth="935.2" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab text="Клиенты">
+                           <content>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <TableView fx:id="clientTable" prefHeight="694.0" prefWidth="1130.0" BorderPane.alignment="CENTER">
+                                       <columns>
+                                          <TableColumn fx:id="idClientColumn" prefWidth="75.0" text="ID" />
+                                          <TableColumn fx:id="secondNameClientColumn" prefWidth="75.0" text="Фамилия" />
+                                          <TableColumn fx:id="firstNameClientColumn" prefWidth="75.0" text="Имя" />
+                                          <TableColumn fx:id="middleNameClientColumn" prefWidth="75.0" text="Отчество" />
+                                          <TableColumn fx:id="phoneClientColumn" prefWidth="75.0" text="Контактный телефон" />
+                                          <TableColumn fx:id="driverLicenceClientColumn" prefWidth="75.0" text="Номер водительского удостоверения" />
+                                          <TableColumn fx:id="carModelClientColumn" prefWidth="75.0" text="Модель автомобиля" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="0.0" prefWidth="935.0" spacing="5.0" BorderPane.alignment="BOTTOM_CENTER">
+                                       <children>
+                                          <Button fx:id="showAllClientsButton" mnemonicParsing="false" text="Показать все записи про клиентов" />
+                                          <Button fx:id="editClientSelectedRecordButton" mnemonicParsing="false" text="Редактировать запись о клиенте" />
+                                          <Button fx:id="deleteClientSelectedRecordButton" mnemonicParsing="false" text="Удалить запись о клиенте" />
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Услуги">
+                           <content>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <TableView fx:id="servicesTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <columns>
+                                          <TableColumn fx:id="idServiceColumn" prefWidth="75.0" text="ID" />
+                                          <TableColumn fx:id="serviceTitleColumn" prefWidth="75.0" text="Название услуги" />
+                                          <TableColumn fx:id="serviceTypeColumn" prefWidth="75.0" text="Тип услуги" />
+                                          <TableColumn fx:id="servicePriceColumn" prefWidth="75.0" text="Цена услуги" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="0.0" prefWidth="935.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="showAllServicesButton" mnemonicParsing="false" text="Показать все записи про услуги" />
+                                          <Button fx:id="editSelectedServiceRecordButton" mnemonicParsing="false" text="Редактировать выбраную запись" />
+                                          <Button fx:id="deleteSelectedServiceRecordButton" mnemonicParsing="false" text="Удалить выбраную запись" />
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Работники">
+                           <content>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <TableView fx:id="workerTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <columns>
+                                          <TableColumn fx:id="idWorkerColumn" prefWidth="75.0" text="ID" />
+                                          <TableColumn fx:id="secondNameWorkerColumn" prefWidth="75.0" text="Фамилия" />
+                                          <TableColumn fx:id="firstNameWorkerColumn" prefWidth="75.0" text="Имя " />
+                                          <TableColumn fx:id="middleNameWorkerColumn" prefWidth="75.0" text="Отчество" />
+                                          <TableColumn fx:id="phoneWorkerColumn" prefWidth="75.0" text="Контактный телефон" />
+                                          <TableColumn fx:id="hiringDateWorkerColumn" prefWidth="75.0" text="Дата приема на работу" />
+                                          <TableColumn fx:id="salaryWorkerColumn" prefWidth="75.0" text="Зарплата" />
+                                          <TableColumn fx:id="occupationWorkerColumn" prefWidth="75.0" text="Вид деятельности" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="0.0" prefWidth="935.0" spacing="5.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="showAllWorkersButton" mnemonicParsing="false" text="Показать записи про всех работников" />
+                                          <Button fx:id="editSelectedWorkerRecordButton" mnemonicParsing="false" text="Редактировать выбраную запись" />
+                                          <Button fx:id="deleteSelectedWorkerRecordButton" mnemonicParsing="false" text="Удалить выбраную запись" />
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </BorderPane.margin>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>
